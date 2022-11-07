@@ -1,7 +1,13 @@
-const robotic = document.querySelector("#robotic")
+const subtract = document.querySelector("#subtract")
+const add = document.querySelector("#add")
+const arm = document.querySelector("#arm")
 
-robotic.addEventListener("click", sayHi)
+add.addEventListener("click", (event) => {
+   arm.value++
+})
 
-function sayHi() {
-    console.log("Hi!")
-}
+subtract.addEventListener("click", (event) => {
+    if(arm.value > 0) {
+        arm.value--
+    }
+})

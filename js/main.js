@@ -1,13 +1,18 @@
-const subtract = document.querySelector("#subtract")
-const add = document.querySelector("#add")
-const arm = document.querySelector("#arm")
+const control = document.querySelectorAll("[data-control]")
 
-add.addEventListener("click", (event) => {
-   arm.value++
+control.forEach( (element) => {
+    element.addEventListener("click", (event) => {
+        manipulatesData(event.target.dataset.control, event.target.parentNode)        
+    })
 })
 
-subtract.addEventListener("click", (event) => {
-    if(arm.value > 0) {
-        arm.value--
+function manipulatesData(operation, control) {
+    const piece = control.querySelector("[data-counter]")
+
+    if(operation === "-") {
+        piece.value = parseInt(piece.value) - 1
+    } else {
+        piece.value = parseInt(piece.value) + 1
     }
-})
+}
+

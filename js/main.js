@@ -36,24 +36,28 @@ const pieces = {
 control.forEach( (element) => {
     element.addEventListener("click", (event) => {
         manipulatesData(event.target.dataset.control, event.target.parentNode)  
-        updateStatistic(event.target.dataset.piece)      
+        updateStatistic(event.target.dataset.piece, event.target.dataset.control)      
     })
 })
 
 function manipulatesData(operation, control) {
-    const piece = control.querySelector("[data-counter]")
-
-    if(operation === "-") {
-        piece.value = parseInt(piece.value) - 1
+    const piece = control.querySelector('[data-counter]')
+    if(operation === "+") {
+        piece.value = Number(piece.value) + 1
     } else {
-        piece.value = parseInt(piece.value) + 1
+        piece.value = Number(piece.value) - 1
     }
 }
 
-function updateStatistic(piece) {   
-
-    statistics.forEach( (element) => {
-        element.textContent = parseInt(element.textContent) + pieces[piece][element.dataset.statistic]        
-    })
+function updateStatistic(piece, operation) {
+    if(operation === "+") {
+        statistics.forEach( (element) => {
+            element.textContent = parseInt(element.textContent) + pieces[piece][element.dataset.statistic]        
+        })
+    } else {
+        statistics.forEach( (element) => {
+            element.textContent = parseInt(element.textContent) - pieces[piece][element.dataset.statistic]
+      })
+    }   
 }
 

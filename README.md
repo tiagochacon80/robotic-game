@@ -11,3 +11,6 @@
 
 Click here to access the site:
 https://robotic-game.vercel.app/
+
+![image](https://user-images.githubusercontent.com/83557269/200852796-9994abac-686b-41d0-b795-7c81661f6931.png)
+

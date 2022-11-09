@@ -9,6 +9,8 @@
 - Understand how JavaScript works
 - Explore, create and declare functions in JavaScript
 
+This site is not responsive.
+
 Click here to access the site:
 https://robotic-game.vercel.app/
 

@@ -8,3 +8,6 @@
 - Manipulate data, events and elements with JavaScript
 - Understand how JavaScript works
 - Explore, create and declare functions in JavaScript
+
+Click here to access the site:
+https://robotic-game.vercel.app/
